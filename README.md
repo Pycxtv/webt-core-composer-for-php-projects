@@ -44,3 +44,6 @@ The PAA (Pet Appreciation Association) has contacted your company in order to cr
 
 #### Links
 https://my.skilldisplay.eu/en/skillset/81
+---
+
+- update composer: `composer self-update` from terminal with elevated privileges
