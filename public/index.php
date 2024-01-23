@@ -1,6 +1,13 @@
 <?php
+require_once '../vendor/autoload.php';
+//namespace OnPHPoint\Composer;
 
-require_once('vendor/autoload.php');
+
+use OnPHPoint\Composer\QRCodeGenerator;
+
+
+//use OnPHPoint\QRCodeGenerator;
+//use OnPHPoint\QRCodeGenerator\QRCodeGenerator;
 
 echo <<<AAA
 <!DOCTYPE html>
@@ -13,7 +20,7 @@ echo <<<AAA
 <body>
 AAA;
 
-$result = QRCodeGenerator::getQRCode();
+$result = QRCodeGenerator::getQRCode('1234')->getDataUri();
 
 echo "<img src='$result'></img>";
 

@@ -1,5 +1,7 @@
 <?php
 
+namespace OnPHPoint\Composer;
+
 use Endroid\QrCode\Builder\Builder;
 use Endroid\QrCode\Encoding\Encoding;
 use Endroid\QrCode\ErrorCorrectionLevel;
@@ -10,7 +12,7 @@ use Endroid\QrCode\Writer\PngWriter;
 
 class QRCodeGenerator
 {
-    static function getQRCode(string $phonenumber)
+    static function getQRCode(string $phonenumber): \Endroid\QrCode\Writer\Result\ResultInterface
     {
         return Builder::create()
             ->writer(new PngWriter())
