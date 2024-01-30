@@ -9,7 +9,7 @@ use OnPHPoint\Composer\QRCodeGenerator;
 //use OnPHPoint\QRCodeGenerator;
 //use OnPHPoint\QRCodeGenerator\QRCodeGenerator;
 
-echo <<<AAA
+echo <<<HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,11 +18,11 @@ echo <<<AAA
     <title>Document</title>
 </head>
 <body>
-AAA;
+HTML;
 
-$result = QRCodeGenerator::getQRCode('1234')->getDataUri();
+//$result = QRCodeGenerator::getQRCode('1234')->getDataUri();
 
-echo "<img src='$result'></img>";
+//echo "<img src='$result'></img>";
 
 echo <<<AAA
 </body>
