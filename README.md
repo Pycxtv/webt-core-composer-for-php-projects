@@ -47,3 +47,4 @@ https://my.skilldisplay.eu/en/skillset/81
 ---
 
 - update composer: `composer self-update` from terminal with elevated privileges
+- enable gd: uncomment `extension=gd` in `php.ini`
