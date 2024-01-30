@@ -8,13 +8,15 @@
     <link href="./output.css" rel="stylesheet">
     <title>Pet Emergency Coil</title>
 </head>
-<body class="bg-amber-100">
-<main class="m-4">
+<body class="bg-amber-100 flex-col flex items-center h-full">
+<main class="m-4 w-11/12 sm:w-10/12 md:w-8/12 lg:w-6/12">
     <h1 class="text-3xl font-medium text-amber-950 ">Pet Emergency Coil</h1>
-    <form >
+    <form>
         <label for="phonenumber" hidden>Phone Number</label>
-        <input type="tel" name="phonenumber" id="phonenumber" placeholder="+43 1 22 33 444">
-        <button id="submit" type="submit" class="bg-amber-600 text-white p-2 rounded font-medium">Submit</button>
+        <div class="mt-4 h-12 w-full">
+            <input  type="tel" name="phonenumber" id="phonenumber" placeholder="+43 1 22 33 444" class="h-full border-amber-600 border-4 rounded">
+            <button id="submit" type="submit" class="bg-amber-600 text-white p-2 rounded font-medium h-full">Submit</button>
+        </div>
     </form>
 
     <div class="bg-amber-100 border-2 w-fit">
