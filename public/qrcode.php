@@ -9,5 +9,4 @@ $telnr = $_GET['tel'];
 $res = QRCodeGenerator::getQRCode($telnr);
 
 header('Content-Type: ' . $res->getMimeType());
-
 echo $res->getString();
