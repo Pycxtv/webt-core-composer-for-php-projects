@@ -34,8 +34,5 @@ class QRCodeGenerator
             ->backgroundColor(new Color(0, 0, 0, 127))
             ->validateResult(false)
             ->build();
-
-
-
     }
 }
