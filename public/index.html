@@ -9,18 +9,18 @@
     <title>Pet Emergency Coil</title>
 </head>
 <body class="bg-amber-100 flex-col flex items-center h-full">
-<main class="m-4 w-11/12 sm:w-10/12 md:w-8/12 lg:w-6/12">
+<main class="m-4 w-11/12 sm:w-10/12 md:w-8/12 lg:w-6/12 flex flex-col items-stretch">
     <h1 class="text-3xl font-medium text-amber-950 ">Pet Emergency Coil</h1>
     <form>
         <label for="phonenumber" hidden>Phone Number</label>
-        <div class="mt-4 h-12 w-full">
-            <input  type="tel" name="phonenumber" id="phonenumber" placeholder="+43 1 22 33 444" class="h-full border-amber-600 border-4 rounded">
+        <div class="mt-4 h-12 w-full flex gap-2 ">
+            <input  type="tel" name="phonenumber" id="phonenumber" placeholder="+43 1 22 33 444" class="h-full border-amber-600 border-4 rounded flex-grow">
             <button id="submit" type="submit" class="bg-amber-600 text-white p-2 rounded font-medium h-full">Submit</button>
         </div>
     </form>
 
-    <div class="bg-amber-100 border-2 w-fit">
-        <img id="qrcode" alt="QR Code" class="hidden" src="">
+    <div class="bg-amber-100 mt-4">
+        <img id="qrcode" alt="QR Code" class="hidden w-full" src="">
     </div>
 </main>
 
