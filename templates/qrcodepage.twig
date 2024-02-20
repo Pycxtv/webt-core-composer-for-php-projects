@@ -10,6 +10,39 @@
 </head>
 <body class="bg-amber-100 flex-col flex items-center h-full justify-between">
 {{ include('header.twig') }}
+
+<main class="m-4 w-10/12 sm:w-6/12 md:w-4/12 lg:w-4/12 xl:w-3/12 basis-full">
+    <form>
+        <label for="phonenumber" hidden>Phone Number</label>
+        <div class="mt-4 h-12 w-full flex gap-2 ">
+            <input type="tel" name="phonenumber" id="phonenumber" placeholder="+43 1 22 33 444"
+                   class="h-full border-amber-600 border-4 rounded flex-grow">
+            <button id="submit" type="submit"
+                    class="bg-amber-600 text-white p-2 rounded font-medium h-full">Submit
+            </button>
+        </div>
+    </form>
+
+    <div class="bg-amber-100 mt-4">
+        <img id="qrcode" alt="QR Code" class="hidden w-full" src="">
+    </div>
+</main>
+
 {{ include('footer.twig') }}
 </body>
+
+<script>
+    const img = document.querySelector('img#qrcode');
+    const tel = document.querySelector('input#phonenumber');
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        img.src = `qrcode.php?tel=${encodeURIComponent(tel.value || '+43 1 22 33 444')}`;
+        img.classList.remove('hidden');
+    });
+
+
+</script>
+
 </html>
