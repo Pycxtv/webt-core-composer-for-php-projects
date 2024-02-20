@@ -1,17 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="./output.css" rel="stylesheet">
-    <title>Pet Emergency Coil</title>
-</head>
-<body class="bg-amber-100 flex-col flex items-center h-full justify-between">
-{{ include('header.twig') }}
+{% extends "base.twig" %}
 
-<main class="m-4 w-10/12 sm:w-6/12 md:w-4/12 lg:w-4/12 xl:w-3/12 basis-full">
+
+{% block title %}QR Code Generator{% endblock %}
+
+{% block content %}
     <form>
         <label for="phonenumber" hidden>Phone Number</label>
         <div class="mt-4 h-12 w-full flex gap-2 ">
@@ -26,23 +18,18 @@
     <div class="bg-amber-100 mt-4">
         <img id="qrcode" alt="QR Code" class="hidden w-full" src="">
     </div>
-</main>
 
-{{ include('footer.twig') }}
-</body>
+{% endblock %}
+{% block script %}
+    <script>
+        const img = document.querySelector('img#qrcode');
+        const tel = document.querySelector('input#phonenumber');
+        const form = document.querySelector('form');
 
-<script>
-    const img = document.querySelector('img#qrcode');
-    const tel = document.querySelector('input#phonenumber');
-    const form = document.querySelector('form');
-
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        img.src = `qrcode.php?tel=${encodeURIComponent(tel.value || '+43 1 22 33 444')}`;
-        img.classList.remove('hidden');
-    });
-
-
-</script>
-
-</html>
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            img.src = `qrcode.php?tel=${encodeURIComponent(tel.value || '+43 1 22 33 444')}`;
+            img.classList.remove('hidden');
+        });
+    </script>
+{% endblock %}
