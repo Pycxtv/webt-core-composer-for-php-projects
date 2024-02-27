@@ -19,6 +19,13 @@
         <img id="qrcode" alt="QR Code" class="hidden w-full" src="">
     </div>
 
+    <div class="flex flex-col gap-4 mt-4 ">
+        {% for tel in ['+43 1234 56789', '+43 9876 54321'] %}
+            {{ include('tel.twig') }}
+        {% endfor %}
+    </div>
+
+
 {% endblock %}
 {% block script %}
     <script>
