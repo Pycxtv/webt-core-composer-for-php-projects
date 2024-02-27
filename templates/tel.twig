@@ -1,4 +1,4 @@
-<div class="bg-amber-300 p-4 rounded">
+<div class="bg-amber-300 p-4 rounded cursor-pointer" onclick="navigator.clipboard.writeText('{{ owner.tel }}'); alert('Copied to clipboard! 😀')">
     <h3 class="font-bold"> 👤 {{ owner.name }}</h3>
     <p>{{ owner.tel }}</p>
 </div>
