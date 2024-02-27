@@ -24,17 +24,6 @@
 {% block script %}
 
 <script>
-    const img = document.querySelector('img#qrcode');
-    const tel = document.querySelector('input#phonenumber');
-    const form = document.querySelector('form');
-
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        img.src = `qrcode.php?tel=${encodeURIComponent(tel.value || '+43 1 22 33 444')}`;
-        img.classList.remove('hidden');
-    });
-
-
 </script>
 
 {% endblock %}
